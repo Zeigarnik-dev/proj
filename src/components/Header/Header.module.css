@@ -1,0 +1,29 @@
+.header{
+    position: relative;
+    padding: 1rem 0;
+}
+
+.header_inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.nav_inner{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #000;
+}
+
+.hr{
+    position: absolute;
+    top:4.25rem;
+    width: 100%;
+}

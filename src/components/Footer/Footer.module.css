@@ -1,0 +1,27 @@
+.footer{
+    padding: 1.25rem 0;
+    background-color: #111111;
+}
+
+.logo{
+    color: #fff;
+}
+
+.inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.nav_inner{
+    color: #fff;
+    font-size: 1.3rem;
+    font-weight: 500;
+}

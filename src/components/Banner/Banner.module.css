@@ -1,0 +1,25 @@
+.banner{
+    background-image: url('/bg.png');
+    height: 70vh;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+
+.inner{
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    align-items: flex-start;
+}
+
+.title{
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+.text{
+    font-size: 2rem;
+    font-weight: 400;
+    width: 50%;
+}
