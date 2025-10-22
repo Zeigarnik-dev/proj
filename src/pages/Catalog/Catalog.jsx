@@ -2,7 +2,7 @@ import Title from "../../components/Title/Title";
 import Button from "../../components/Button/Button";
 import s from "./Catalog.module.css";
 import Filter from "../../components/Filter/Filter";
-import { cards } from "../../data.js";
+import { cards, filters } from "../../data.js";
 import Card from "../../components/Card/Card";
 export default function Catalog() {
   return (
@@ -29,10 +29,7 @@ export default function Catalog() {
         </div>
         <div className={s.filters}>
           <Filter txt="Все букеты" isFirst />
-          <Filter txt="Монобукеты" />
-          <Filter txt="Авторские букеты" />
-          <Filter txt="Цветы в коробке" />
-          <Filter txt="Цветы поштучно" />
+          {filters.map((filter)=>(<Filter key={filter.id} {...filter} />))}
         </div>
         <div className={s.catalog}>
           {cards.map((card) => (

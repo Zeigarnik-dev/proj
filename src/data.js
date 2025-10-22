@@ -8,3 +8,10 @@ export const cards = [
     { id: 7, title: '25 диантусов розовых оттенков', price: '4350 ₽', img: '/card7.png' },
     { id: 8, title: 'Кустовые пионовидные розы', price: '3250 ₽', img: '/card8.png' },
 ]
+
+export const filters = [
+    {id: 1, txt: "Монобукеты"},
+    {id: 2, txt: "Авторские букеты"},
+    {id: 3, txt: "Цветы в коробке"},
+    {id: 4, txt: "Цветы поштучно"},
+] 
