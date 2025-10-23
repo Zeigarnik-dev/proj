@@ -33,7 +33,7 @@ export default function Catalog() {
         </div>
         <div className={s.catalog}>
           {cards.map((card) => (
-            <Card key={card.id} {...card} />
+            <Card {...card} />
           ))}
         </div>
       </div>

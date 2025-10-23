@@ -48,3 +48,7 @@ body,
 main {
   flex: 1 1 auto;
 }
+
+a.active{
+  color: #CA0B45;
+}
