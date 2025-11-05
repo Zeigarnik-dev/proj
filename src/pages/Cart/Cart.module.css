@@ -1,0 +1,44 @@
+h2{
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+}
+
+.cart_inner{
+    display: flex;
+    justify-content: space-between;
+}
+
+.cartProds{
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.total_price{
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+.total_price button{
+    width: 100%;
+}
+
+.total_price h3{
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.total_price p{
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-size: 1.3rem;
+    color: #666C78;
+}
+
+.total_price p span{
+    color: black;
+    font-weight: 500;
+}

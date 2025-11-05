@@ -1,0 +1,49 @@
+.cartProd{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.cartProd img{
+    width: 185px;
+    height: 185px;
+    object-fit: cover;
+}
+
+.prod_info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+.info_top{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.info_top h3{
+    font-size: 1.8rem;
+    font-weight: 300;
+}
+
+.info_top p{
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.info_bottom{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.pointer{
+    cursor: pointer;
+}
+
+.info_bottom p{
+    font-size: 1.7rem;
+    font-weight: 500;
+}

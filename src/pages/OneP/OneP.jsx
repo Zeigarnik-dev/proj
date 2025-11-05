@@ -1,10 +1,24 @@
 import s from './OneP.module.css'
 import { useParams } from 'react-router'
-import { cards } from '../../data'
+import { useEffect, useState } from 'react'
+// import { cards } from '../../data'
 import Button from '../../components/Button/Button'
-export default function OneP() {
+export default function OneP({cart, setCart}) {
     let prodId = useParams()
-    let prod = cards.find(el => el.id == prodId.id)
+    let[prod, setProd] = useState({})
+    useEffect(() => {
+        getProd()
+    })
+    async function getProd() {
+        const res = await fetch(`http://localhost:3000/cards/${prodId.id}`)
+        const data = await res.json()
+        setProd(data)
+    }
+
+    function handleClick() {
+        localStorage.setItem('cart', JSON.stringify([...cart, prod.id]))
+        setCart([...cart, prod.id])
+    }
     return (
         <div className="container">
             <section className={s.infos}>
@@ -19,7 +33,7 @@ export default function OneP() {
                             <p><span className={s.grey}>Ширина:</span> {prod.width} см</p>
                             <p><span className={s.grey}>Высота:</span> {prod.height} см</p>
                         </div>
-                        <Button txt='В корзину'/>
+                        <Button txt='В корзину' handleClick={handleClick}/>
                     </div>
                     <div className={s.bott_inf}>
                         <h4>Описание</h4>

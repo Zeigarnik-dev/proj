@@ -1,10 +1,12 @@
 import Title from "../../components/Title/Title";
 import s from "./Catalog.module.css";
 import Filter from "../../components/Filter/Filter";
-import { cards, filters } from "../../data.js";
+// import { cards, filters } from "../../data.js";
 import Card from "../../components/Card/Card";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 export default function Catalog() {
+  let[filters, setFilters] = useState([])
+  let[cards, setCards] = useState([])
   let[search, findItem] = useState("")
   let[selected, setSelect] = useState('default')
   let[category, setCategory] = useState(null)
@@ -21,6 +23,21 @@ export default function Catalog() {
     }
     return matchesSearch && matchesCategory
   })
+
+async function getCards(){
+  const res = await fetch('http://localhost:3000/cards')
+  const data = await res.json()
+  setCards(data)
+}
+async function getFilters(){
+  const res = await fetch('http://localhost:3000/filters')
+  const data = await res.json()
+  setFilters(data)
+}
+useEffect(()=>{
+  getCards()
+  getFilters()
+}, [])
 
 const sortprod = (sorting, arr)=>{
   switch(sorting){

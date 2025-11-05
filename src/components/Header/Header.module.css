@@ -20,10 +20,19 @@
     font-size: 1.3rem;
     font-weight: 500;
     color: #000;
+    display: flex;
+    align-items: start;
+    justify-content: center;
 }
 
 .hr{
     position: absolute;
     top:4.25rem;
     width: 100%;
+}
+
+.counter{
+    color: #000;
+    font-size: 0.8rem;
+    font-weight: 500;
 }
